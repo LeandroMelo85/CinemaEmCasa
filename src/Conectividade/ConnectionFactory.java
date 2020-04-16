@@ -16,29 +16,29 @@ import javax.swing.JOptionPane;
 public class ConnectionFactory {
 
     //SQL SERVER
-    public static Connection connection;
+    /*public static Connection connection;
     public static String classDriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     public static String URL = "jdbc:sqlserver://21.21.0.201:1433;databaseName=SRV_TESTE;";
     public static String USER = "sa";
-    public static String PASS = "135128Lm";
+    public static String PASS = "135128Lm";*/
 
     //MYSQL
-    /*private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://21.21.0.201/test";
+    private static final String DRIVER = "com.mysql.jdbc.Driver";
+    private static final String URL = "jdbc:mysql://localhost/TESTE_MYSQL";
     private static final String USER = "root";
-    private static final String PASS = "135128Lm";*/
+    private static final String PASS = "";
 
    //CONEXÃO MYSQL
-    /*public static Connection getConnection() {
+    public static Connection getConnection() {
         try {
             Class.forName(DRIVER);
             return DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException | SQLException ex) {
             throw new RuntimeException("Erro ao conectar: ", ex);
         }
-    }*/
+    }
 
-    public static Connection getConnection() {
+    /*public static Connection getConnection() {
 
         try {
             Class.forName(classDriver);
@@ -50,7 +50,7 @@ public class ConnectionFactory {
             return null;
         }
 
-    }
+    }*/
     /*private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://mysql785.umbler.com:41890/sabrysystem";
     private static final String USER = "rootsabry";
