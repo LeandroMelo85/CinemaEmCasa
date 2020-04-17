@@ -27,10 +27,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jMenuBar2 = new javax.swing.JMenuBar();
+        PainelPrincipal = new javax.swing.JDesktopPane();
+        BarraMenu = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        menuNovoFilme = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
@@ -41,45 +41,57 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1366, 768));
         setResizable(false);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PainelPrincipalLayout = new javax.swing.GroupLayout(PainelPrincipal);
+        PainelPrincipal.setLayout(PainelPrincipalLayout);
+        PainelPrincipalLayout.setHorizontalGroup(
+            PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1024, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        PainelPrincipalLayout.setVerticalGroup(
+            PainelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 747, Short.MAX_VALUE)
         );
 
         jMenu3.setText("Arquivo");
 
-        jMenuItem3.setText("Menu 01");
-        jMenu3.add(jMenuItem3);
+        menuNovoFilme.setText("Novo Filme");
+        menuNovoFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNovoFilmeActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menuNovoFilme);
 
         jMenuItem4.setText("Menu 02");
         jMenu3.add(jMenuItem4);
 
-        jMenuBar2.add(jMenu3);
+        BarraMenu.add(jMenu3);
 
         jMenu4.setText("Edit");
-        jMenuBar2.add(jMenu4);
+        BarraMenu.add(jMenu4);
 
-        setJMenuBar(jMenuBar2);
+        setJMenuBar(BarraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(PainelPrincipal)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(PainelPrincipal)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void menuNovoFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNovoFilmeActionPerformed
+        CadastroFilmes novoCadastro = new CadastroFilmes();
+        novoCadastro.setVisible(true);
+        TelaPrincipal.PainelPrincipal.add(novoCadastro);
+        //novoCadastro.setPosicao(); Função ainda não implementada na classe.
+    }//GEN-LAST:event_menuNovoFilmeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,11 +129,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenuBar BarraMenu;
+    private static javax.swing.JDesktopPane PainelPrincipal;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem menuNovoFilme;
     // End of variables declaration//GEN-END:variables
 }
