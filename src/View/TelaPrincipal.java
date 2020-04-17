@@ -31,6 +31,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         BarraMenu = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         menuNovoFilme = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
 
@@ -61,8 +62,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenu3.add(menuNovoFilme);
+        jMenu3.add(jSeparator1);
 
-        jMenuItem4.setText("Menu 02");
+        jMenuItem4.setText("Sair");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         BarraMenu.add(jMenu3);
@@ -92,6 +99,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         TelaPrincipal.PainelPrincipal.add(novoCadastro);
         //novoCadastro.setPosicao(); Função ainda não implementada na classe.
     }//GEN-LAST:event_menuNovoFilmeActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,6 +145,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuItem menuNovoFilme;
     // End of variables declaration//GEN-END:variables
 }
